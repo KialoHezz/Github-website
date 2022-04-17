@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 8rem;
+  width: 25%;
+  text-transform: uppercase;
+  position: absolute;
+  left: 15rem;
+  border-radius: 2rem solid #fff;
+}
+
+.form-input{
+    width: 100%;
+    margin: 1rem 0;
+}

@@ -1,0 +1,20 @@
+.bg-dark{
+    background: linear-gradient(to bottom,rgb(54, 49, 34), rgb(53, 54, 50));
+    height: 100vh;
+    color: #fff;
+    padding: 2rem;
+    margin: auto 0;
+}
+
+
+.display-info{
+    background-color: rgb(53, 54, 50);
+    height: 70vh;
+    width: 50%;
+}
+
+.p-info{
+    text-transform: capitalize;
+    padding: 3rem;
+    margin: .2rem 1rem;
+}
