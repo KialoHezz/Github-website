@@ -12,12 +12,12 @@
 
 img {
   height: 2rem;
-  padding: .2rem ;
-  margin: 0 .2rem;
+  padding: 0.2rem;
+  margin: 0 0.2rem;
   background: transparent;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
 }
 
-.form-group{
-    width: 25%;
+.form-group {
+  width: 25%;
 }

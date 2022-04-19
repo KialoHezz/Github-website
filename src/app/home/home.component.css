@@ -1,8 +1,7 @@
-.content{
-    text-align: center;
-    margin: 7rem 0;
-    padding: 5rem;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
+.content {
+  text-align: center;
+  margin: 7rem 0;
+  padding: 5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
-

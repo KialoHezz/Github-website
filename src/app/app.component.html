@@ -5,10 +5,19 @@
   <div class="content d-flex justify-content-between mt-3">
     <div class="form">
       <app-form></app-form>
-      <p class="p-info">fill in form and submit to see name and description person repository</p>
+      <p class="p-info">
+        Welcome to GitSearch where You Can Search for
+        <span><b>Github Users</b></span> and <span><b> Repositories.</b></span>
+        <br />
+
+        <button class="btn btn-primary" (click)="show()">
+          Github Users $ Repos
+        </button>
+      </p>
     </div>
     <div class="display-info">
-      <app-home></app-home>
+      <!-- <app-home></app-home> -->
+      <router-outlet></router-outlet>
       <!-- <app-person-acess-token></app-person-acess-token> -->
     </div>
   </div>
