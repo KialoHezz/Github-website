@@ -3,22 +3,13 @@
     <app-nav-bar></app-nav-bar>
   </div>
   <div class="content d-flex justify-content-between mt-3">
-    <div class="form">
-      <p class="p-info">
-        Welcome to GitSearch where You Can Search for
-        <span><b>Github Users</b></span> and <span><b> Repositories.</b></span>
-        <br />
-        
-        <button class="btn btn-primary" (click)="show()">
-          Github Users $ Repos
-        </button>
-        <app-form></app-form>
-      </p>
-    </div>
+    <div class="form"></div>
     <div class="display-info">
-      <router-outlet></router-outlet>
+      <app-form></app-form>
+      
     </div>
   </div>
+
   <div class="footer">
     <app-footer></app-footer>
   </div>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { GitClass } from './git-class';
 import { GitRepo } from './git-repo';
 import { lastValueFrom } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,7 @@ export class GithubService {
     this.repository = new GitRepo('', '', '', new Date(), new Date());
   }
 
-  async getUserData(Username: string) {
+  async getUserData() {
     this.repoData.length = 0; // Empties the Array From Previous Request After a New Request
   }
 
@@ -28,25 +29,28 @@ export class GithubService {
     const fetchRepo = this.http.get<GitRepo>(
       'https://api.github.com/repository' + repository
     );
-    await lastValueFrom(fetchRepo).then(
+   return await lastValueFrom(fetchRepo).then(
       (Response) => {
         this.repository.name = Response.name;
         this.repository.full_name = Response.full_name;
         this.repository.description = Response.description;
         this.repository.updated_at = Response.updated_at;
         this.repository.created_at = Response.created_at;
+        return this.repository
       },
       (error) => error
     );
   }
 
-  //functioln to get user
+  //function to get user
   async getUser(username: string) {
     const fetchUser = this.http.get<GitClass>(
-      'https://api.github.com/users' + username
+      `${environment.apiUrl}users/${username}`
+
+
     );
 
-    await lastValueFrom(fetchUser).then(
+   return  await lastValueFrom(fetchUser).then(
       (response) => {
         // Mapping The Response we get to Every Property that we'll Eventually Use to Display in our git-search-results.component.html
         this.user.avatar_url = response.avatar_url;
@@ -54,6 +58,7 @@ export class GithubService {
         this.user.public_repos = response.public_repos;
         this.user.name = response.name;
         this.user.updated_at = response.updated_at;
+        return this.user
       },
 
       (error) => error

@@ -1,16 +1,33 @@
 <div class="container">
   <div class="form">
-    <form (ngSubmit)="gitSearch()" #gitForm = 'ngForm' >
+    <form (ngSubmit)="gitSearch(username)" #gitForm="ngForm">
       <div class="form-groups">
         <label for="name">Github</label>
         <div>
-          <input class="form-input" type="text" id="name" placeholder="Github Username" name="name" />
+          <input
+            class="form-input"
+            type="text"
+            id="name"
+            placeholder="Github Username"
+            name="name"
+            [(ngModel)]="username"
+          />
         </div>
+        {{ username }}
       </div>
-    
+
       <div class="form-groups">
-        <button class="btn btn-primary btn-button" type="submit">Search Github Username & Repos</button>
+        <button class="btn btn-primary btn-button" type="submit">
+          Search Github Username & Repos
+        </button>
       </div>
     </form>
+  </div>
+  <div class="container-fluid">
+    <div *ngIf="user">
+      <h1>Username: {{ user.login }}</h1>
+      <h1>Repository: {{ user.public_repos }}</h1>
+      <img src="{{ user.avatar_url }}" alt="" height="109px"/>
+    </div>
   </div>
 </div>

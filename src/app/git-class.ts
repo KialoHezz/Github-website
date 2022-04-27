@@ -10,7 +10,7 @@ export class GitClass {
     public following: number,
     public date: Date,
     public created_at: any,
-    public updated_at: any,
+    public updated_at: any
   ) {
     this.show = true;
   }

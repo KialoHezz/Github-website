@@ -1,6 +1,5 @@
 .bg-dark{
     background: linear-gradient(to bottom,rgb(54, 49, 34), rgb(53, 54, 50));
-    height: 100vh;
     color: #fff;
     padding: 2rem;
     margin: auto 0;
@@ -17,4 +16,9 @@
     text-transform: capitalize;
     padding: 3rem;
     margin: .2rem 1rem;
+}
+
+.form-display{
+    align-items: center;
+    transform: translate(50%);
 }
